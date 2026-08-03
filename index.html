@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ICEWEN — 设计与创意作品集</title>
+    <meta name="description" content="喻佩文（Icewen）的个人作品集：UI 视觉设计、AI 视觉设计、AIGC 内容生产与自动化工作流。" />
+    <meta name="author" content="喻佩文 Icewen" />
+    <meta name="theme-color" content="#0a0d0c" />
+
+    <!-- 分享卡片。部署后把下面 3 个 URL 换成完整域名，微信 / Twitter 不认相对路径 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content="ICEWEN" />
+    <meta property="og:title" content="ICEWEN — 设计与创意作品集" />
+    <meta property="og:description" content="UI 视觉设计 / AI 视觉设计 / AIGC 工作流。6 年视觉设计经验，把 AI 与自动化真正用到业务里。" />
+    <meta property="og:image" content="assets/hero-clean.jpg" />
+    <meta property="og:url" content="index.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ICEWEN — 设计与创意作品集" />
+    <meta name="twitter:description" content="UI 视觉设计 / AI 视觉设计 / AIGC 工作流。" />
+    <meta name="twitter:image" content="assets/hero-clean.jpg" />
+
+    <link rel="icon" href="assets/favicon.svg" />
+    <link rel="apple-touch-icon" href="assets/favicon.svg" />
+    <link rel="preload" as="image" href="assets/hero-clean.jpg" fetchpriority="high" />
+    <link rel="stylesheet" href="styles.css?v=20260803w" />
+    <script src="script.js?v=20260803t" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <svg class="icon-sprite" aria-hidden="true" focusable="false" width="0" height="0">
+      <defs>
+        <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" /></symbol>
+        <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v13M6 13l6 6 6-6" /></symbol>
+        <symbol id="i-right" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" /></symbol>
+        <symbol id="i-mark" viewBox="0 0 24 24"><path d="M12 5l7 13H5z" /></symbol>
+        <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 11l5 5 5-5M5 20h14" /></symbol>
+        <symbol id="i-visual" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="8.5" /><circle cx="12" cy="12" r="3" fill="currentColor" stroke="none" />
+        </symbol>
+        <symbol id="i-aigc" viewBox="0 0 24 24">
+          <path d="M12 3.5c0 4.7 3.8 8.5 8.5 8.5-4.7 0-8.5 3.8-8.5 8.5 0-4.7-3.8-8.5-8.5-8.5 4.7 0 8.5-3.8 8.5-8.5z" />
+        </symbol>
+        <symbol id="i-workflow" viewBox="0 0 24 24">
+          <path d="M20.5 12a8.5 8.5 0 1 1-2.6-6.1M20.5 3.5v4.2h-4.2" />
+        </symbol>
+      </defs>
+    </svg>
+
+    <aside class="rail" aria-label="侧栏">
+      <span class="rail-mark" aria-hidden="true"><svg class="icon"><use href="#i-mark" /></svg></span>
+      <nav class="rail-nav" aria-label="章节进度">
+        <a href="#home" aria-label="第一屏：首页"><i aria-hidden="true"></i></a>
+        <a href="#work" aria-label="第二屏：作品"><i aria-hidden="true"></i></a>
+        <a href="#about" aria-label="第三屏：关于我"><i aria-hidden="true"></i></a>
+      </nav>
+      <span class="rail-type" aria-hidden="true">DESIGN × AIGC</span>
+    </aside>
+
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="ICEWEN 首页">ICEWEN <i aria-hidden="true"></i></a>
+      <nav class="desktop-nav" aria-label="主导航">
+        <a href="#home">首页</a>
+        <a href="#work">作品</a>
+        <a href="#about">关于我</a>
+      </nav>
+      <div class="music-wrap">
+        <button class="music-toggle" type="button" aria-label="播放背景音乐" aria-pressed="false">
+          <span class="music-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+        <span class="music-hint" aria-hidden="true">点这里放首曲子 ♪</span>
+      </div>
+      <details class="menu">
+        <summary aria-label="打开菜单"><svg class="icon" aria-hidden="true"><use href="#i-menu" /></svg></summary>
+        <nav aria-label="移动端导航">
+          <a href="#home">首页</a>
+          <a href="#work">作品</a>
+          <a href="#about">关于我</a>
+        </nav>
+      </details>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home">
+        <div class="hero-shade"></div>
+        <div class="film-grain"></div>
+
+        <div class="hero-content">
+          <p class="eyebrow">你好，我是 <strong>喻佩文 / Icewen</strong></p>
+          <h1>用设计记录真实<br />用创意探索未来</h1>
+          <p class="role">UI 视觉设计 / AI 视觉设计 / AIGC 工作流</p>
+          <p class="intro">从传统 UI 与视觉设计走向 AI 内容创作，<br />把审美、执行经验与技术探索结合起来。</p>
+          <a class="primary-button" href="#work">
+            探索我的作品 <svg class="icon" aria-hidden="true"><use href="#i-right" /></svg>
+          </a>
+        </div>
+
+        <blockquote>“去看更大的世界，<br />也找回自己。”</blockquote>
+
+        <a class="hero-more" href="#work">
+          <span aria-hidden="true"><svg class="icon"><use href="#i-down" /></svg></span>向下滚动
+        </a>
+
+        <div class="status-card">
+          <div>
+            <b>OPEN TO WORK</b>
+            <span>UI 视觉 · AI 视觉 · AIGC 工作流</span>
+            <span>常州 / 无锡 / 镇江</span>
+          </div>
+          <em aria-hidden="true">●<br />FILM</em>
+        </div>
+      </section>
+
+      <section class="work" id="work">
+        <div class="section-heading">
+          <div>
+            <h2>我的作品</h2>
+            <p>从视觉设计到 AIGC，把新技术真正应用到业务中</p>
+          </div>
+          <a href="#contact">联系合作 <svg class="icon" aria-hidden="true"><use href="#i-right" /></svg></a>
+        </div>
+
+        <!--
+          横向抽屉：默认展开第一格，鼠标移到哪格哪格展开（触屏是第一次点展开、
+          第二次点进入）。已有二级页的写成 <a>，还没有的写成 <div> 并把「查看」
+          换成状态文字 —— 不做点不动的假入口。
+        -->
+        <div class="project-rail" data-rail>
+          <a class="panel" href="work-app.html">
+            <img class="panel-bg panel-bg--icon" src="assets/work/category-icons/app.webp" alt="" width="1024" height="1536" />
+            <span class="panel-num" aria-hidden="true">01</span>
+            <span class="panel-name" aria-hidden="true">APP 设计</span>
+            <span class="panel-en" aria-hidden="true">APP DESIGN</span>
+            <div class="panel-detail">
+              <h3>APP 设计</h3>
+              <p>思德慧医 APP、AI 洗车小程序 —— 从用户画像、<br />产品架构、交互文档到高保真界面交付。</p>
+              <span class="panel-go"><i aria-hidden="true"><svg class="icon"><use href="#i-right" /></svg></i>查看</span>
+            </div>
+            <span class="panel-bar" aria-hidden="true"><i></i></span>
+          </a>
+
+          <a class="panel" href="work-web.html">
+            <img class="panel-bg panel-bg--icon" src="assets/work/category-icons/web.webp" alt="" width="1086" height="1448" loading="lazy" />
+            <span class="panel-num" aria-hidden="true">02</span>
+            <span class="panel-name" aria-hidden="true">网页设计</span>
+            <span class="panel-en" aria-hidden="true">WEB DESIGN</span>
+            <div class="panel-detail">
+              <h3>网页设计</h3>
+              <p>甲由官网改版 —— 从网格布局到新旧版本对比，<br />兼顾品牌调性与转化路径。</p>
+              <span class="panel-go"><i aria-hidden="true"><svg class="icon"><use href="#i-right" /></svg></i>查看</span>
+            </div>
+            <span class="panel-bar" aria-hidden="true"><i></i></span>
+          </a>
+
+          <a class="panel" href="work-viz.html">
+            <img class="panel-bg panel-bg--icon" src="assets/work/category-icons/viz.webp" alt="" width="1086" height="1448" loading="lazy" />
+            <span class="panel-num" aria-hidden="true">03</span>
+            <span class="panel-name" aria-hidden="true">大数据可视化</span>
+            <span class="panel-en" aria-hidden="true">DATA VISUALIZATION</span>
+            <div class="panel-detail">
+              <h3>大数据可视化</h3>
+              <p>智慧井盖可视化大屏 —— 从情绪版、设计规范<br />到细节落地，在高密度信息里保持可读与秩序。</p>
+              <span class="panel-go"><i aria-hidden="true"><svg class="icon"><use href="#i-right" /></svg></i>查看</span>
+            </div>
+            <span class="panel-bar" aria-hidden="true"><i></i></span>
+          </a>
+
+          <a class="panel" href="work-icon.html">
+            <img class="panel-bg panel-bg--icon" src="assets/work/category-icons/icon.webp" alt="" width="1086" height="1448" loading="lazy" />
+            <span class="panel-num" aria-hidden="true">04</span>
+            <span class="panel-name" aria-hidden="true">LOGO 图标</span>
+            <span class="panel-en" aria-hidden="true">LOGO &amp; ICON</span>
+            <div class="panel-detail">
+              <h3>LOGO 图标</h3>
+              <p>标识与系统图标，<br />统一的几何规则与视觉重量。</p>
+              <span class="panel-go"><i aria-hidden="true"><svg class="icon"><use href="#i-right" /></svg></i>查看</span>
+            </div>
+            <span class="panel-bar" aria-hidden="true"><i></i></span>
+          </a>
+
+          <a class="panel" href="work-ai.html">
+            <img class="panel-bg panel-bg--icon" src="assets/work/category-icons/ai.webp" alt="" width="1086" height="1448" loading="lazy" />
+            <span class="panel-num" aria-hidden="true">05</span>
+            <span class="panel-name" aria-hidden="true">AI 创作</span>
+            <span class="panel-en" aria-hidden="true">AI · AUTOMATION</span>
+            <div class="panel-detail">
+              <h3>AI 设计与自动化</h3>
+              <p>从一致性生图、AI 视频创作，到 RPA 与代码工作流，<br />把创意生产沉淀为可复用的效率工具。</p>
+              <span class="panel-go"><i aria-hidden="true"><svg class="icon"><use href="#i-right" /></svg></i>查看</span>
+            </div>
+            <span class="panel-bar" aria-hidden="true"><i></i></span>
+          </a>
+        </div>
+      </section>
+
+      <section class="about-screen" id="about">
+        <div class="about-heading">
+          <p>ABOUT &amp; CAPABILITIES</p>
+          <h2>让设计经验与技术探索结合</h2>
+        </div>
+
+        <div class="values">
+          <article class="value">
+            <span class="value-icon" aria-hidden="true"><svg class="icon"><use href="#i-visual" /></svg></span>
+            <div>
+              <h3>视觉设计</h3>
+              <p>多年 UI、视觉与特效经验，在版式、色彩与交付细节中保持稳定判断。</p>
+              <em aria-hidden="true">Visual</em>
+            </div>
+          </article>
+          <article class="value">
+            <span class="value-icon" aria-hidden="true"><svg class="icon"><use href="#i-aigc" /></svg></span>
+            <div>
+              <h3>AIGC 内容生产</h3>
+              <p>将 AI 生图、AI 视频真正用于业务，兼顾画面质量、批量效率与可复用性。</p>
+              <em aria-hidden="true">AIGC</em>
+            </div>
+          </article>
+          <article class="value">
+            <span class="value-icon" aria-hidden="true"><svg class="icon"><use href="#i-workflow" /></svg></span>
+            <div>
+              <h3>工作流搭建</h3>
+              <p>用 RPA 与代码梳理流程，把重复人工环节做成团队也能使用的工具。</p>
+              <em aria-hidden="true">Workflow</em>
+            </div>
+          </article>
+
+          <aside class="about-card" id="contact">
+            <img class="wechat-qr" src="assets/wechat-qr.jpg" width="230" height="230" alt="喻佩文的微信二维码" loading="lazy" />
+            <p class="qr-hint">扫码 / 长按识别加微信</p>
+            <!-- 把简历放到 assets/resume.pdf，这个按钮就会自动出现；找不到文件时自动隐藏，不会留下死链 -->
+            <a class="resume-button" data-resume href="assets/resume.pdf" download hidden>
+              <svg class="icon" aria-hidden="true"><use href="#i-download" /></svg>下载简历 PDF
+            </a>
+          </aside>
+        </div>
+
+        <footer>
+          <div class="footer-meta">
+            <span>喻佩文 · UI 视觉设计 / AIGC 工作流</span>
+            <span>期望城市：常州 / 无锡 / 镇江</span>
+          </div>
+
+          <!--
+            有站酷 / Behance / 小红书 / GitHub 的话，照下面这行的格式补进来就行：
+            <a class="footer-link" href="https://www.zcool.com.cn/u/xxxxxx" target="_blank" rel="noopener">站酷</a>
+          -->
+          <div class="footer-links"></div>
+
+          <div class="footer-contacts">
+            <button class="footer-copy" type="button" data-copy="924563521@qq.com" aria-label="复制邮箱地址">
+              <span>924563521@qq.com</span><em data-copy-status>点击复制</em>
+            </button>
+            <button class="footer-copy" type="button" data-copy="15920531410" aria-label="复制手机号码">
+              <span>159 **** 1410</span><em data-copy-status>点击复制</em>
+            </button>
+          </div>
+        </footer>
+      </section>
+    </main>
+
+    <p class="sr-only" role="status" data-copy-live></p>
+    <audio id="background-music" src="assets/background-music.mp3" preload="none" loop></audio>
+  </body>
+</html>

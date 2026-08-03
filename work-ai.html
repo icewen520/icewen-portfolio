@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI 设计与自动化 — ICEWEN 作品集</title>
+    <meta name="description" content="喻佩文（Icewen）的 AI 设计与自动化作品：一致性生成、AI 视频创作，以及将创意生产沉淀为可复用的工作流。" />
+    <meta name="theme-color" content="#0a0d0c" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content="ICEWEN" />
+    <meta property="og:title" content="AI 设计与自动化 — ICEWEN 作品集" />
+    <meta property="og:description" content="跨境女装图 · AI 视频创作 · 创意自动化工作流" />
+    <meta property="og:image" content="assets/work/ai/g1-out-1.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="assets/favicon.svg" />
+    <link rel="apple-touch-icon" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="styles.css?v=20260803y" />
+    <link rel="stylesheet" href="work.css?v=20260803ad" />
+    <script src="work.js?v=20260803ab" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#frames">跳到作品内容</a>
+
+    <svg class="icon-sprite" aria-hidden="true" focusable="false" width="0" height="0">
+      <defs>
+        <symbol id="i-left" viewBox="0 0 24 24"><path d="M20 12H5M11 6l-6 6 6 6" /></symbol>
+        <symbol id="i-right" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" /></symbol>
+        <symbol id="i-mark" viewBox="0 0 24 24"><path d="M12 5l7 13H5z" /></symbol>
+        <symbol id="i-expand" viewBox="0 0 24 24"><path d="M9 4H4v5M15 4h5v5M15 20h5v-5M9 20H4v-5" /></symbol>
+        <symbol id="i-mute" viewBox="0 0 24 24">
+          <path d="M4 9.4h3.3L12 5.5v13L7.3 14.6H4z" /><path d="M16.6 10.2l4.4 3.6M21 10.2l-4.4 3.6" />
+        </symbol>
+        <symbol id="i-sound" viewBox="0 0 24 24">
+          <path d="M4 9.4h3.3L12 5.5v13L7.3 14.6H4z" /><path d="M16.1 9.6a3.9 3.9 0 0 1 0 4.8" /><path d="M18.7 7.2a7.4 7.4 0 0 1 0 9.6" />
+        </symbol>
+      </defs>
+    </svg>
+
+    <aside class="case-rail" aria-hidden="true">
+      <span class="rail-mark"><svg class="icon"><use href="#i-mark" /></svg></span>
+      <span class="case-count"><b data-frame-current>01</b><i></i><span data-frame-total>—</span></span>
+      <span class="rail-type" aria-hidden="true">AI DESIGN</span>
+    </aside>
+
+    <header class="case-header">
+      <a class="case-back" href="index.html#work">
+        <svg class="icon" aria-hidden="true"><use href="#i-left" /></svg>返回作品
+      </a>
+      <p class="case-title">AI 设计与自动化<span>跨境女装图 · AI 视频创作 · 创意自动化工作流</span></p>
+      <a class="case-contact" href="index.html#contact">联系我</a>
+    </header>
+
+    <!--
+      组 01–03：一屏一组，「人台图 + 参考图 = 成果图」，图片数量按每组实际素材来（不强求一致）。
+        原本有 5 组，砍到 3 组精选——五组同一套论证重复太多次，
+        「量」交给下面的全部成果屏来体现。
+      全部成果：一屏平铺，14 张批量产出，和其他屏一样正常吸附（内容比一屏高就往下滚，
+        不再用 scroll-snap-align:none——那样在 mandatory 吸附下会被直接跳过，一晃就到下一屏）。
+      AI 视频：单条轮播，详细说明见下方 .clip-carousel 结构里的注释。
+    -->
+    <main class="frames" id="frames">
+      <section class="frame" id="ai-workbench" data-first>
+        <p class="frame-label"><b>AI 生成工作台</b><span data-workbench-status>01 / 04 · 点击左右按键切换</span></p>
+        <div class="rpa-showcase ai-workbench-showcase" data-workbench-showcase>
+          <div class="rpa-certificate">
+            <img src="assets/work/ai-workbench/01.jpg" width="1920" height="982" alt="AI 生成工作台界面 01" data-workbench-image />
+            <p data-workbench-level>AI 生成工作台界面 01</p>
+          </div>
+          <button class="rpa-nav rpa-nav--prev" type="button" data-workbench-prev aria-label="展示上一张 AI 生成工作台界面">
+            <svg class="icon" aria-hidden="true"><use href="#i-left" /></svg>
+          </button>
+          <button class="rpa-nav rpa-nav--next" type="button" data-workbench-next aria-label="展示下一张 AI 生成工作台界面">
+            <svg class="icon" aria-hidden="true"><use href="#i-right" /></svg>
+          </button>
+        </div>
+      </section>
+
+      <section class="frame" id="ai-image" data-first>
+        <p class="frame-label"><b>跨境女装图</b><span>组 01</span></p>
+        <div class="combo">
+          <div class="combo-set combo-set--wear">
+            <p class="combo-cap">人台图</p>
+            <img src="assets/work/ai/g1-form-1.webp" width="900" alt="组 01 人台图 1" />
+            <img src="assets/work/ai/g1-form-2.webp" width="900" alt="组 01 人台图 2" />
+            <img src="assets/work/ai/g1-form-3.webp" width="900" alt="组 01 人台图 3" />
+          </div>
+          <span class="combo-op" aria-hidden="true">+</span>
+          <div class="combo-set combo-set--model">
+            <p class="combo-cap">参考图</p>
+            <img src="assets/work/ai/g1-ref.webp" width="900" alt="组 01 参考图" />
+          </div>
+          <span class="combo-op" aria-hidden="true">=</span>
+          <div class="combo-set combo-set--out">
+            <p class="combo-cap">成果图</p>
+            <img src="assets/work/ai/g1-out-1.webp" width="900" alt="组 01 成果图 1" />
+            <img src="assets/work/ai/g1-out-2.webp" width="900" alt="组 01 成果图 2" />
+            <img src="assets/work/ai/g1-out-3.webp" width="900" alt="组 01 成果图 3" />
+            <img src="assets/work/ai/g1-out-4.webp" width="900" alt="组 01 成果图 4" />
+          </div>
+        </div>
+      </section>
+
+      <section class="frame">
+        <p class="frame-label"><b>跨境女装图</b><span>组 02</span></p>
+        <div class="combo">
+          <div class="combo-set combo-set--wear">
+            <p class="combo-cap">人台图</p>
+            <img src="assets/work/ai/g2-form-1.webp" width="900" alt="组 02 人台图 1" loading="lazy" />
+            <img src="assets/work/ai/g2-form-2.webp" width="900" alt="组 02 人台图 2" loading="lazy" />
+            <img src="assets/work/ai/g2-form-3.webp" width="900" alt="组 02 人台图 3" loading="lazy" />
+          </div>
+          <span class="combo-op" aria-hidden="true">+</span>
+          <div class="combo-set combo-set--model">
+            <p class="combo-cap">参考图</p>
+            <img src="assets/work/ai/g2-ref.webp" width="900" alt="组 02 参考图" loading="lazy" />
+          </div>
+          <span class="combo-op" aria-hidden="true">=</span>
+          <div class="combo-set combo-set--out">
+            <p class="combo-cap">成果图</p>
+            <img src="assets/work/ai/g2-out-1.webp" width="900" alt="组 02 成果图 1" loading="lazy" />
+            <img src="assets/work/ai/g2-out-2.webp" width="900" alt="组 02 成果图 2" loading="lazy" />
+            <img src="assets/work/ai/g2-out-3.webp" width="900" alt="组 02 成果图 3" loading="lazy" />
+            <img src="assets/work/ai/g2-out-4.webp" width="900" alt="组 02 成果图 4" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <section class="frame">
+        <p class="frame-label"><b>跨境女装图</b><span>组 03</span></p>
+        <div class="combo">
+          <div class="combo-set combo-set--wear">
+            <p class="combo-cap">人台图</p>
+            <img src="assets/work/ai/g3-form-1.webp" width="900" alt="组 03 人台图 1" loading="lazy" />
+            <img src="assets/work/ai/g3-form-2.webp" width="900" alt="组 03 人台图 2" loading="lazy" />
+            <img src="assets/work/ai/g3-form-3.webp" width="900" alt="组 03 人台图 3" loading="lazy" />
+          </div>
+          <span class="combo-op" aria-hidden="true">+</span>
+          <div class="combo-set combo-set--model">
+            <p class="combo-cap">参考图</p>
+            <img src="assets/work/ai/g3-ref.webp" width="900" alt="组 03 参考图" loading="lazy" />
+          </div>
+          <span class="combo-op" aria-hidden="true">=</span>
+          <div class="combo-set combo-set--out">
+            <p class="combo-cap">成果图</p>
+            <img src="assets/work/ai/g3-out-1.webp" width="900" alt="组 03 成果图 1" loading="lazy" />
+            <img src="assets/work/ai/g3-out-2.webp" width="900" alt="组 03 成果图 2" loading="lazy" />
+            <img src="assets/work/ai/g3-out-3.webp" width="900" alt="组 03 成果图 3" loading="lazy" />
+            <img src="assets/work/ai/g3-out-4.webp" width="900" alt="组 03 成果图 4" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <section class="frame frame--flow" id="ai-all" data-first>
+        <p class="frame-label"><b>全部成果</b><span>批量生成的完整产出 · 向下滑动查看</span></p>
+        <div class="tile-grid">
+          <img src="assets/work/ai/all-01.webp" width="900" alt="成果图 01" loading="lazy" />
+          <img src="assets/work/ai/all-02.webp" width="900" alt="成果图 02" loading="lazy" />
+          <img src="assets/work/ai/all-03.webp" width="900" alt="成果图 03" loading="lazy" />
+          <img src="assets/work/ai/all-04.webp" width="900" alt="成果图 04" loading="lazy" />
+          <img src="assets/work/ai/all-05.webp" width="900" alt="成果图 05" loading="lazy" />
+          <img src="assets/work/ai/all-06.webp" width="900" alt="成果图 06" loading="lazy" />
+          <img src="assets/work/ai/all-07.webp" width="900" alt="成果图 07" loading="lazy" />
+          <img src="assets/work/ai/all-08.webp" width="900" alt="成果图 08" loading="lazy" />
+          <img src="assets/work/ai/all-09.webp" width="900" alt="成果图 09" loading="lazy" />
+          <img src="assets/work/ai/all-10.webp" width="900" alt="成果图 10" loading="lazy" />
+          <img src="assets/work/ai/all-11.webp" width="900" alt="成果图 11" loading="lazy" />
+          <img src="assets/work/ai/all-12.webp" width="900" alt="成果图 12" loading="lazy" />
+          <img src="assets/work/ai/all-13.webp" width="900" alt="成果图 13" loading="lazy" />
+          <img src="assets/work/ai/all-14.webp" width="900" alt="成果图 14" loading="lazy" />
+        </div>
+      </section>
+
+      <section class="frame" id="ai-video" data-first>
+        <p class="frame-label"><b>AI 视频</b><span>6 条作品同步循环 · 右上角图标开声音</span></p>
+        <!--
+          作品墙：六条视频同时展示、各自循环播放。静音自动播放符合浏览器规则；
+          点击任意一条右上角图标可单独打开它的声音。
+        -->
+        <div class="clip-carousel clip-grid" data-video-wall>
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <div class="clip">
+                <video src="assets/work/ai/clip-01.mp4" poster="assets/work/ai/clip-01.jpg" width="720" height="1280" muted loop playsinline preload="metadata" aria-label="AI 视频 01"></video>
+                <button class="clip-sound" type="button" aria-pressed="false" aria-label="打开 AI 视频 01 的声音">
+                  <svg class="icon icon-off" aria-hidden="true"><use href="#i-mute" /></svg>
+                  <svg class="icon icon-on" aria-hidden="true"><use href="#i-sound" /></svg>
+                </button>
+              </div>
+              <div class="clip">
+                <video src="assets/work/ai/clip-02.mp4" poster="assets/work/ai/clip-02.jpg" width="720" height="1280" muted loop playsinline preload="metadata" aria-label="AI 视频 02"></video>
+                <button class="clip-sound" type="button" aria-pressed="false" aria-label="打开 AI 视频 02 的声音">
+                  <svg class="icon icon-off" aria-hidden="true"><use href="#i-mute" /></svg>
+                  <svg class="icon icon-on" aria-hidden="true"><use href="#i-sound" /></svg>
+                </button>
+              </div>
+              <div class="clip">
+                <video src="assets/work/ai/clip-03.mp4" poster="assets/work/ai/clip-03.jpg" width="720" height="1280" muted loop playsinline preload="metadata" aria-label="AI 视频 03"></video>
+                <button class="clip-sound" type="button" aria-pressed="false" aria-label="打开 AI 视频 03 的声音">
+                  <svg class="icon icon-off" aria-hidden="true"><use href="#i-mute" /></svg>
+                  <svg class="icon icon-on" aria-hidden="true"><use href="#i-sound" /></svg>
+                </button>
+              </div>
+              <div class="clip">
+                <video src="assets/work/ai/clip-04.mp4" poster="assets/work/ai/clip-04.jpg" width="720" height="1280" muted loop playsinline preload="metadata" aria-label="AI 视频 04"></video>
+                <button class="clip-sound" type="button" aria-pressed="false" aria-label="打开 AI 视频 04 的声音">
+                  <svg class="icon icon-off" aria-hidden="true"><use href="#i-mute" /></svg>
+                  <svg class="icon icon-on" aria-hidden="true"><use href="#i-sound" /></svg>
+                </button>
+              </div>
+              <div class="clip">
+                <video src="assets/work/ai/clip-05.mp4" poster="assets/work/ai/clip-05.jpg" width="720" height="1280" muted loop playsinline preload="metadata" aria-label="AI 视频 05"></video>
+                <button class="clip-sound" type="button" aria-pressed="false" aria-label="打开 AI 视频 05 的声音">
+                  <svg class="icon icon-off" aria-hidden="true"><use href="#i-mute" /></svg>
+                  <svg class="icon icon-on" aria-hidden="true"><use href="#i-sound" /></svg>
+                </button>
+              </div>
+              <div class="clip">
+                <video src="assets/work/ai/clip-06.mp4" poster="assets/work/ai/clip-06.jpg" width="720" height="1280" muted loop playsinline preload="metadata" aria-label="AI 视频 06"></video>
+                <button class="clip-sound" type="button" aria-pressed="false" aria-label="打开 AI 视频 06 的声音">
+                  <svg class="icon icon-off" aria-hidden="true"><use href="#i-mute" /></svg>
+                  <svg class="icon icon-on" aria-hidden="true"><use href="#i-sound" /></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="frame rpa-frame" id="rpa-automation">
+        <p class="frame-label"><b>影刀 RPA 自动化</b><span data-rpa-status>01 / 06 · 点击左右按键切换</span></p>
+        <div class="rpa-showcase" data-rpa-showcase>
+          <div class="rpa-certificate">
+            <img src="assets/work/rpa/01.jpg" width="1920" height="1040" alt="影刀 RPA 自动化作品 01" data-rpa-image />
+            <p data-rpa-level>影刀 RPA 自动化作品 01</p>
+          </div>
+          <button class="rpa-nav rpa-nav--prev" type="button" data-rpa-prev aria-label="展示上一张 RPA 作品图">
+            <svg class="icon" aria-hidden="true"><use href="#i-left" /></svg>
+          </button>
+          <button class="rpa-nav rpa-nav--next" type="button" data-rpa-next aria-label="展示下一张 RPA 作品图">
+            <svg class="icon" aria-hidden="true"><use href="#i-right" /></svg>
+          </button>
+        </div>
+      </section>
+
+      <section class="case-end">
+        <h2>看完了</h2>
+        <p>以上是 AI 设计与自动化部分：从一致性生成、AI 视频创作，到用 RPA 与代码把重复创意生产沉淀为工作流。想聊聊具体怎么控的，随时联系我。</p>
+        <div class="case-actions">
+          <a class="case-button" href="index.html#contact">
+            联系我 <svg class="icon" aria-hidden="true"><use href="#i-right" /></svg>
+          </a>
+          <a class="case-button case-button--ghost" href="index.html#work">
+            <svg class="icon" aria-hidden="true"><use href="#i-left" /></svg>返回作品
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <div class="viewer" data-viewer>
+      <button class="viewer-close" type="button" data-viewer-close aria-label="关闭">✕</button>
+      <img alt="" />
+      <p class="viewer-hint">滚动查看 · 按 Esc 或点击空白处关闭</p>
+    </div>
+  </body>
+</html>
