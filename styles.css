@@ -797,13 +797,62 @@ blockquote::after {
   transform: scale(1.03);
 }
 
-/* 首页分类图标本身已是统一的深色视觉，不需要再压到和照片封面一样暗。 */
+/* 这套图标是「暗底 + 居中 3D 物件」的独立构图，不是能直接铺满裁切的照片——
+   收起态是又窄又长的竖条，硬套 cover 会把图标裁得只剩中间一小块，看不出图案。
+   改成 contain 悬浮在面板自己的底色上，不管面板宽高比怎么变，图标都完整可见。
+   收起态、展开态都保持水平居中（跟竖排标题、横排标题各自的居中感呼应），
+   只是展开时位置往上提一点、尺寸放大，给下面的标题和文案留出空间。
+   （中间试过展开态贴左对齐标题、也试过左文右图分栏，都不如居中直接） */
 .panel-bg--icon {
-  filter: brightness(0.76) contrast(1.04);
+  position: absolute;
+  z-index: 0;
+  inset: auto;
+  top: 46%;
+  left: 50%;
+  width: min(64%, 140px);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+  filter: brightness(0.82) contrast(1.05) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.45));
+  transition: filter 0.6s, transform 0.6s, width 0.55s, left 0.5s, top 0.5s;
 }
 
 .panel.is-open .panel-bg--icon {
-  filter: brightness(0.98) contrast(1.03);
+  top: 40%;
+  left: 50%;
+  width: min(40%, 210px);
+  transform: translate(-50%, -50%);
+  filter: brightness(1) contrast(1.03) drop-shadow(0 16px 30px rgba(0, 0, 0, 0.5));
+}
+
+/* 图标不再铺满，面板四周需要自己的底色，让图标「悬浮」在上面，
+   呼应原图那种暗色渐变背景，而不是露出面板的透明/白底。
+   直接给面板加 modifier class（而不是 :has(.panel-bg--icon)）——
+   这类选择器虽然浏览器基本都支持了，但这个项目里每次靠 CSS 隐式推导
+   （百分比高度、min-content 反推列宽……）都踩过坑，显式类名更省心 */
+.panel--icon {
+  background: radial-gradient(circle at 50% 42%, #1c1712 0%, var(--ink) 72%);
+}
+
+/* 电路板走线纹理，垫在图标和文字下面，填一下展开态右侧的空白 ——
+   透明度压得很低（描边本身 12-16%，外层再乘一层 opacity），
+   只是个背景质感，不能抢图标和文字的注意力。
+   z-index 用 0 而不是 -1：.panel 只写了 position:relative，没有显式建立
+   层叠上下文，负数 z-index 的子元素会脱离 .panel 的层级范围、被其他兄弟
+   面板或外层容器的背景盖住，直接变得不可见——踩过这个坑。改成 0，
+   靠 ::before 在 DOM 顺序上先于 .panel-bg--icon（同 z-index 时后来者盖住先来者），
+   图标一样能正常叠在纹理上面，不用负值。
+   .panel 本身 overflow:hidden 会把纹理裁在面板范围内，不会溢出 */
+.panel--icon::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cg fill='none' stroke='%23d7652a' stroke-opacity='.16' stroke-width='1'%3E%3Cpath d='M0 24 H46 V58 H98'/%3E%3Cpath d='M140 70 H104 V104 H60'/%3E%3Cpath d='M20 140 V112 H52'/%3E%3C/g%3E%3Cg fill='%23d7652a' fill-opacity='.28'%3E%3Ccircle cx='46' cy='58' r='2.2'/%3E%3Ccircle cx='104' cy='104' r='2.2'/%3E%3Ccircle cx='52' cy='112' r='2.2'/%3E%3C/g%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.045' stroke-width='1'%3E%3Cpath d='M0 .5 H140 M0 139.5 H140 M.5 0 V140 M139.5 0 V140'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 140px 140px;
+  opacity: 0.55;
+  pointer-events: none;
 }
 
 /* 底部压深保证文字可读，但别压太狠 —— 换成真实作品图后这层是唯一的保护 */
@@ -923,7 +972,9 @@ blockquote::after {
   color: var(--muted-soft);
 }
 
-/* 底部装饰进度条：展开时橙色填充跑一段 */
+/* 底部装饰线：纯装饰，不代表任何数据（之前是「跑到固定 34%」+ 一个端点圆点，
+   长得像进度条却没有对应的真实进度，容易让人误以为在暗示什么数据，去掉了）。
+   改成从中心向两侧展开，跟图标居中的布局逻辑呼应，展开时铺满整条，没有歧义 */
 .panel-bar {
   position: absolute;
   z-index: 2;
@@ -942,25 +993,15 @@ blockquote::after {
 
 .panel-bar i {
   position: absolute;
-  inset: 0 auto 0 0;
-  width: 0;
+  inset: 0;
   background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: center;
 }
 
 .panel.is-open .panel-bar i {
-  width: 34%;
-  transition: width 1.2s cubic-bezier(0.2, 0.7, 0.3, 1) 0.3s;
-}
-
-.panel-bar i::after {
-  content: "";
-  position: absolute;
-  right: -3px;
-  top: -2.5px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--orange);
+  transform: scaleX(1);
+  transition: transform 1.1s cubic-bezier(0.2, 0.7, 0.3, 1) 0.3s;
 }
 
 /* --- 第三屏：关于 & 联系 ------------------------------------------------- */
